@@ -33,9 +33,6 @@ jobs:
           sudo rm -rf "$AGENT_TOOLSDIRECTORY" || true
           sudo rm -rf "/usr/local/lib/android" || true
           sudo rm -rf "/usr/local/share/boost" || true
-      - name: docker rmi 1
-        run: |
-          docker rmi $(docker image ls -q --filter "reference=node*")
       - name: docker rmi 2
         run: |
           docker rmi $(docker image ls -q --filter "reference=debian*")
