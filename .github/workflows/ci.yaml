@@ -50,7 +50,6 @@ jobs:
             ghc* \
             google-chrome-stable* \
             google-cloud-sdk* \
-            heroku* \
             imagemagick* \
             javascript* \
             kubectl* \
