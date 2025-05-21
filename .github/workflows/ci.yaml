@@ -1,0 +1,22 @@
+name: Push Workflows
+
+on: [push]
+
+jobs:
+
+  helloworld:
+    name: Hello World!
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exec Echo
+        run: |
+          echo "Hello World!"
+          echo "Good Bye!"
+
+  test_download:
+    name: Download Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Hello
+        run: |
+          echo Hello TestDownload
