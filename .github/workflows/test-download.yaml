@@ -1,0 +1,11 @@
+name: Test Download
+
+on: [push]
+
+jobs:
+  main:
+    name: Test Download
+    steps:
+      - name: Echo Hello
+        run: |
+          echo Hello TestDownload
