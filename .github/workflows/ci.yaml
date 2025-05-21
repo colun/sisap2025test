@@ -14,16 +14,16 @@ jobs:
           echo "Good Bye!"
 
   test_download:
-    name: Download Test 1
+    name: Download Test 2
     runs-on: ubuntu-latest
     steps:
       - name: Echo Hello
         run: |
           echo Hello TestDownload
-      - name: Download Task1
+      - name: Download Task2
         run: |
           mkdir data
-          curl -L "https://huggingface.co/datasets/sadit/SISAP2025/resolve/main/benchmark-dev-pubmed23.h5?download=true" -o data/benchmark-dev-pubmed23.h5
-      - name: Info Task1
+          curl -L "https://huggingface.co/datasets/sadit/SISAP2025/resolve/main/benchmark-dev-gooaq.h5?download=true" -o data/benchmark-dev-gooaq.h5
+      - name: Info Task2
         run: |
-          python3 info_h5.py data/benchmark-dev-pubmed23.h5
+          python3 info_h5.py data/benchmark-dev-gooaq.h5
