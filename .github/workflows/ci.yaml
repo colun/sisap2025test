@@ -24,3 +24,6 @@ jobs:
         run: |
           mkdir data
           curl -L "https://huggingface.co/datasets/sadit/SISAP2025/resolve/main/benchmark-dev-pubmed23.h5?download=true" -o data/benchmark-dev-pubmed23.h5
+      - name: Info Task1
+        run: |
+          python3 info_h5.py data/benchmark-dev-pubmed23.h5
