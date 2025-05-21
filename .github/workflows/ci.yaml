@@ -21,13 +21,25 @@ jobs:
       - name: Echo Hello
         run: |
           echo Hello TestDownload
+      - name: Check space 1
+        run: |
+          df -h
       - name: Install h5py
         run: |
           python3 -m pip install h5py
+      - name: Check space 2
+        run: |
+          df -h
       - name: Download Task2
         run: |
           mkdir data
           curl -L "https://huggingface.co/datasets/sadit/SISAP2025/resolve/main/benchmark-dev-gooaq.h5?download=true" -o data/benchmark-dev-gooaq.h5
+      - name: Check space 3
+        run: |
+          df -h
       - name: Info Task2
         run: |
           python3 info_h5.py data/benchmark-dev-gooaq.h5
+      - name: Check space 4
+        run: |
+          df -h
