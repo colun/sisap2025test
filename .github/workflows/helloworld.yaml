@@ -8,5 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Exec Echo
-        run: echo "Hello World!"
-        run: echo "Good Bye!"
+        run: |
+          echo "Hello World!"
+          echo "Good Bye!"
