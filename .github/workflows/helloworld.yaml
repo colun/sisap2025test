@@ -9,3 +9,4 @@ jobs:
     steps:
       - name: Exec Echo
         run: echo "Hello World!"
+        run: echo "Good Bye!"
