@@ -33,9 +33,8 @@ jobs:
           sudo rm -rf "$AGENT_TOOLSDIRECTORY" || true
           sudo rm -rf "/usr/local/lib/android" || true
           sudo rm -rf "/usr/local/share/boost" || true
-      - name: docker rmi 4
-        run: |
-          docker rmi $(docker image ls -q --filter "reference=ubuntu:20.04")
+      - name: Check space checkupoint cleanup
+        run: df -h
       - name: apt-get remove cleanup
         run: |
           sudo apt purge -y \
