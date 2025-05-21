@@ -5,6 +5,7 @@ on: [push]
 jobs:
   main:
     name: Test Download
+    runs-on: ubuntu-latest
     steps:
       - name: Echo Hello
         run: |
