@@ -21,6 +21,9 @@ jobs:
       - name: Echo Hello
         run: |
           echo Hello TestDownload
+      - name: Install h5py
+        run: |
+          python3 -m pip install h5py
       - name: Download Task2
         run: |
           mkdir data
