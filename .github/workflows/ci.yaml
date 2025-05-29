@@ -17,12 +17,16 @@ jobs:
     name: Show Environments
     runs-on: ubuntu-latest
     steps:
-      - name: SWAP check before off
-        run: sudo swapon --show
-      - name: SWAP OFF
+      - name: Swap check before off
+        run: |
+          sudo swapon --show
+          free
+      - name: Swap off
         run: sudo swapoff -a
-      - name: SWAP check after off
-        run: sudo swapon --show
+      - name: Swap check after off
+        run: |
+          sudo swapon --show
+          free
 
   test_download1:
     if: ${{ false }}
