@@ -13,6 +13,13 @@ jobs:
           echo "Hello World!"
           echo "Good Bye!"
 
+  show_environments:
+    name: Show Environments
+    runs-on: ubuntu-latest
+    steps:
+      - name: SWAP
+        run: sudo swapon --show
+
   test_download1:
     if: ${{ false }}
     name: Download Test 1
