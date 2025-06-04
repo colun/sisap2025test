@@ -21,12 +21,21 @@ jobs:
         run: |
           sudo swapon --show
           free
+          df
       - name: Swap off
         run: sudo swapoff -a
       - name: Swap check after off
         run: |
           sudo swapon --show
           free
+          df
+      - name: Remove Swapfile
+        run: sudo rm /mnt/swapfile
+      - name: Swap check after off
+        run: |
+          sudo swapon --show
+          free
+          df
 
   test_download1:
     if: ${{ false }}
