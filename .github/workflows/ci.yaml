@@ -38,7 +38,7 @@ jobs:
           df
       - name: Create new Swapfile
         run: |
-          sudo fallocate -l 68G /mnt/swapfile
+          sudo fallocate -l 69G /mnt/swapfile
           sudo chmod 600 /mnt/swapfile
           sudo mkswap /mnt/swapfile
           sudo swapon /mnt/swapfile
