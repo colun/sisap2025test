@@ -30,8 +30,13 @@ jobs:
           free
           df
       - name: Remove Swapfile
-        run: sudo rm /mnt/swapfile
-      - name: Swap check after off
+        run: |
+          sudo rm /mnt/swapfile
+          sudo fallocate -l 64G /mnt/swapfile
+          sudo chmod 600 /mnt/swapfile
+          sudo mkswap /mnt/swapfile
+          sudo swapon /mnt/swapfile
+      - name: Swap check after delete
         run: |
           sudo swapon --show
           free
